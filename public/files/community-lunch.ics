@@ -1,0 +1,15 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Colorlib//Welfare Example Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:community-lunch-welfare-2027@colorlib.com
+DTSTAMP:20261023T000000Z
+DTSTART:20270206T100000
+DTEND:20270206T120000
+SUMMARY:Community lunch & pantry morning
+LOCATION:Example Community hall
+DESCRIPTION:Illustrative event. Help prepare the room\, share a meal and me
+ et the pantry team. Confirm local arrangements before attending.
+END:VEVENT
+END:VCALENDAR

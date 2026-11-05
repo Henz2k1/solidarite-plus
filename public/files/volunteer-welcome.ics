@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Colorlib//Welfare Example Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:volunteer-welcome-welfare-2027@colorlib.com
+DTSTAMP:20261023T000000Z
+DTSTART:20270217T183000
+DTEND:20270217T200000
+SUMMARY:Volunteer welcome evening
+LOCATION:Example Community hall
+DESCRIPTION:Illustrative event. An informal introduction to the example pro
+ grammes and the people who coordinate them. Confirm local arrangements bef
+ ore attending.
+END:VEVENT
+END:VCALENDAR
