@@ -1,58 +1,150 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🤝 Solidarités Plus RDC - Application Web Officielle
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Ce projet est la plateforme web dynamique de **Solidarités Plus RDC** (SOLIPLUS), développée sous le framework **Laravel**.
 
-## About Laravel
+## 📌 1. À propos de SOLIDARITÉS PLUS RDC
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**SOLIDARITÉS PLUS** est une organisation non gouvernementale (ONG) nationale de droit congolais créée en 2003, basée à Goma (Nord-Kivu, RDC).
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* **Mission :** Sauver des vies et alléger les souffrances des populations les plus vulnérables en s'attaquant aux causes sous-jacentes de la pauvreté.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Axe stratégique majeur :** Protection intégrée et accompagnement des survivant(e)s de violences basées sur le genre (VBG), promotion de la santé et des droits sexuels et reproductifs (SDSR), lutte contre le VIH/SIDA, et autonomisation socio-économique (AVEC, MUSO, AGR).
 
-## Learning Laravel
+* **Zones d'intervention prioritaires :** Province du Nord-Kivu (Axes Rutshuru, Nyiragongo, Masisi) et du Sud-Kivu.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ 2. Architecture du Projet Web & Répartition de l'Équipe
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Le projet repose sur la conversion d'une maquette statique HTML/CSS/JS vers une application web dynamique **Laravel**.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### 👥 Répartition des Rôles :
 
-## Agentic Development
+* **Développeur Front-End :**
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+  * Intégration et découpage des maquettes HTML/CSS/JS statiques vers Blade (`resources/views/`).
 
-```bash
-composer require laravel/boost --dev
+  * Gestion des composants visuels, du responsive design, de l'accessibilité et des interactions JS.
 
-php artisan boost:install
+  * Organisation et optimisation des assets (dossier `public/` et/ou compilation **Vite**).
+
+* **Développeur Back-End :**
+
+  * Conception et gestion de la base de données (Migrations, Seeders, Modèles Eloquent).
+
+  * Développement de la logique métier, des contrôleurs, des formulaires (Contact, Dons, Événements, Dynamic Content).
+
+  * Gestion de la sécurité, de l'authentification et de l'administration du contenu.
+
+## 📋 3. Règles du Workflow Git & Collaborations
+
+Afin de garantir un historique propre, stable et d'éviter les conflits d'intégration entre le Front-End et le Back-End, l'équipe doit appliquer strictement les règles suivantes :
+
+### 🔀 Gestion des Branches (`Git Flow`)
+
+* `main` / `master` : Branche de production. Ne jamais pusher directement dessus.
+
+* `develop` : Branche principale d'intégration. Tout le travail validé y est fusionné.
+
+* **Branches de fonctionnalités (Feature Branches) :**
+
+  * `feature/frontend-name-page` (ex: `feature/frontend-home-blade`, `feature/frontend-css-fix`)
+
+  * `feature/backend-feature-name` (ex: `feature/backend-donations-controller`, `feature/backend-auth`)
+
+### 📝 Convention de Commit (Conventional Commits)
+
+Chaque commit doit obligatoirement respecter la structure suivante :
+
+`<type>(<scope>): <description claire et concrète>`
+
+#### Types autorisés :
+
+* `feat` : Nouvelle fonctionnalité (ex: `feat(front): integration de la page d'accueil en Blade`)
+
+* `fix` : Correction d'un bug (ex: `fix(css): correction de l'alignement du menu mobile`)
+
+* `style` : Changement d'apparence, formatage, CSS sans modification logique.
+
+* `refactor` : Re-structuration du code sans changement de fonctionnalité.
+
+* `docs` : Modification de la documentation ou du README.
+
+* `chore` : Tâches de configuration (Vite, Composer, npm, etc.).
+
+#### Exemples de bons commits :
+
+```
+git commit -m "feat(front): création du layout principal app.blade.php"
+git commit -m "feat(back): mise en place des migrations pour les causes et événements"
+git commit -m "fix(front): ajustement des liens de navigation du header"
+
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## 🚀 4. Installation et Configuration Locale
 
-## Contributing
+### Prérequis
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+* PHP >= 8.2
 
-## Code of Conduct
+* Composer
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+* Node.js & NPM
 
-## Security Vulnerabilities
+* MySQL / PostgreSQL
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Procédure d'installation
 
-## License
+1. **Cloner le projet :**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   ```
+   git clone <URL_DU_REPO_GITHUB>
+   cd soliplus-web
+   
+   ```
+
+2. **Installer les dépendances PHP :**
+
+   ```
+   composer install
+   
+   ```
+
+3. **Installer les dépendances JS/CSS :**
+
+   ```
+   npm install
+   
+   ```
+
+4. **Configurer l'environnement :**
+
+   ```
+   cp .env.example .env
+   php artisan key:generate
+   
+   ```
+
+   *(Configurer ensuite les accès à la base de données dans le fichier `.env`)*
+
+5. **Lancer les migrations et seeders :**
+
+   ```
+   php artisan migrate --seed
+   
+   ```
+
+6. **Démarrer le serveur local :**
+
+   ```
+   php artisan serve
+   
+   ```
+
+   *(Et si compilation Vite nécessaire : `npm run dev`)*
+
+## 📩 5. Contacts & Secrétariat
+
+* **Agence de réalisation :** Solidarités Plus RDC (« SOLIPLUS »)
+
+* **Email officiel :** `solidariteplusasbl@gmail.com`
+
+* **Siège opérationnel :** Goma, Nord-Kivu, République Démocratique du Congo.
