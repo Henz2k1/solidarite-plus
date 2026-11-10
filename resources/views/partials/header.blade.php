@@ -28,8 +28,8 @@
         <li class="nav-item {{ Request::is('about') ? 'active' : '' }}">
           <a href="{{ url('/about') }}" class="nav-link">À propos</a>
         </li>
-        <li class="nav-item {{ Request::is('impact') ? 'active' : '' }}">
-          <a href="{{ url('/impact') }}" class="nav-link">Notre approche</a>
+        <li class="nav-item {{ Request::is('approach') ? 'active' : '' }}">
+          <a href="{{ url('/approach') }}" class="nav-link">Notre approche</a>
         </li>
         <li class="nav-item {{ Request::is('volunteer') ? 'active' : '' }}">
           <a href="{{ url('/volunteer') }}" class="nav-link">Blog</a>
