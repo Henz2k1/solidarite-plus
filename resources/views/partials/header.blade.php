@@ -31,14 +31,14 @@
         <li class="nav-item {{ Request::is('approach') ? 'active' : '' }}">
           <a href="{{ url('/approach') }}" class="nav-link">Notre approche</a>
         </li>
-        <li class="nav-item {{ Request::is('volunteer') ? 'active' : '' }}">
-          <a href="{{ url('/volunteer') }}" class="nav-link">Blog</a>
+        <li class="nav-item {{ Request::is('events') ? 'active' : '' }}">
+          <a href="{{ url('/events') }}" class="nav-link">Événements</a>
         </li>
-        <li class="nav-item {{ Request::is('event') ? 'active' : '' }}">
-          <a href="{{ url('/event') }}" class="nav-link">Événements</a>
+        <li class="nav-item {{ Request::is('blog') ? 'active' : '' }}">
+          <a href="{{ url('/blog') }}" class="nav-link">Blog</a>
         </li>
         <li class="nav-item {{ Request::is('contact') ? 'active' : '' }}">
-          <a href="{{ url('/contact') }}" class="nav-link">Contacts</a>
+          <a href="{{ url('/blog') }}" class="nav-link">Contacts</a>
         </li>
       </ul>
     </div>
