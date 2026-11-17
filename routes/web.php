@@ -91,3 +91,12 @@ Route::middleware(['auth'])->group(function () {
         ->except(['show']);
 
 });
+
+Route::get('/events', function () {
+    return view('events');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
