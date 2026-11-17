@@ -33,7 +33,7 @@
                             <p class="ed-eyebrow">Notes de terrain</p>
                             <h3><a href="{{ url('/article-volunteer-first-day') }}">L'importance de l'écoute active auprès des survivantes</a></h3>
                             <p>Comment l'approche centrée sur la survivante garantit la confidentialité, la sécurité et la dignité sur le terrain.</p>
-                            <a class="ed-text-link" href="{{ url('/article-volunteer-first-day') }}">Lire l'article<span aria-hidden="true">↗</span></a>
+                            <a class="ed-text-link" href="{{ url('/blog-detail') }}">Lire l'article<span aria-hidden="true">↗</span></a>
                         </div>
                     </article>
 
@@ -48,7 +48,7 @@
                             <p class="ed-eyebrow">Redevabilité</p>
                             <h3><a href="{{ url('/article-transparent-updates') }}">Transparence et efficience dans nos projets humanitaires</a></h3>
                             <p>Pourquoi des rapports de progression honnêtes et une gestion rigoureuse des ressources locales font toute la différence.</p>
-                            <a class="ed-text-link" href="{{ url('/article-transparent-updates') }}">Lire l'article<span aria-hidden="true">↗</span></a>
+                            <a class="ed-text-link" href="{{ url('/blog-detail') }}">Lire l'article<span aria-hidden="true">↗</span></a>
                         </div>
                     </article>
 
@@ -63,7 +63,7 @@
                             <p class="ed-eyebrow">Communauté</p>
                             <h3><a href="{{ url('/article-help-without-money') }}">Cinq manières de soutenir l'autonomisation des vulnérables</a></h3>
                             <p>Temps, compétences pratiques et ancrage communautaire : comment chacun peut contribuer à sa mesure.</p>
-                            <a class="ed-text-link" href="{{ url('/article-help-without-money') }}">Lire l'article<span aria-hidden="true">↗</span></a>
+                            <a class="ed-text-link" href="{{ url('/blog-detail') }}">Lire l'article<span aria-hidden="true">↗</span></a>
                         </div>
                     </article>
                 </div>

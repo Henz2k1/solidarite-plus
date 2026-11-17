@@ -26,4 +26,11 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/blog-detail', function () {
+    return view('blog-detail');
+});
+
+// Route pour afficher un article spécifique via son identifiant ou son slug
+//Route::get('/articles/{slug}', [ArticleController::class, 'show'])->name('articles.show');
+
 
