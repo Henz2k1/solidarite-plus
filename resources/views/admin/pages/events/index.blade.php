@@ -25,7 +25,7 @@
                     </ol>
                 </div>
 
-                <a href="{{ route('events.create') }}"
+                <a href="{{ route('admin.events.create') }}"
                    class="btn btn-primary">
                     <i class="mdi mdi-plus me-1"></i>
                     Nouvel événement

@@ -69,7 +69,6 @@ class ContentController extends Controller
                     return '<span class="badge bg-danger">Inactif</span>';
                 })
 
-                // Actions
                 ->addColumn('action', function ($row) {
 
                     $editUrl = route('contents.edit', $row->id);
@@ -78,10 +77,9 @@ class ContentController extends Controller
                     return '
                     <div class="btn-group">
 
-                        <a href="javascript:void(0);"
-                            data-url="'.$editUrl.'"
-                            class="action-icon text-primary edit-btn"
-                            title="Éditer">
+                        <a href="'.$editUrl.'"
+                            class="action-icon text-primary"
+                            title="Modifier">
 
                             <i class="mdi mdi-square-edit-outline font-18"></i>
                         </a>
@@ -194,10 +192,7 @@ class ContentController extends Controller
      */
     public function edit(Content $content)
     {
-        return response()->json([
-            'status' => true,
-            'data' => $content,
-        ]);
+        return view('admin.pages.contents.edit', compact('content'));
     }
 
     /**
@@ -251,13 +246,9 @@ class ContentController extends Controller
             )
         ) {
             return response()->json([
-                'message' => 'Une image est obligatoire pour ce contenu.',
-                'errors' => [
-                    'image_file' => [
-                        'Veuillez sélectionner une image.',
-                    ],
-                ],
-            ], 422);
+                'status' => true,
+                'message' => 'Contenu ajouté avec succès.',
+            ]);
         }
 
         // Si une nouvelle image est envoyée

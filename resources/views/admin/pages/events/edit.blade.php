@@ -20,7 +20,7 @@
                             <a href="{{ route('dashboard.analytics') }}">Dashboard</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{ route('events.index') }}">Événements</a>
+                            <a href="{{ route('admin.events.index') }}">Événements</a>
                         </li>
                         <li class="breadcrumb-item active">
                             Modifier
@@ -28,7 +28,7 @@
                     </ol>
                 </div>
 
-                <a href="{{ route('events.index') }}"
+                <a href="{{ route('admin.events.index') }}"
                    class="btn btn-light">
                     <i class="mdi mdi-arrow-left me-1"></i>
                     Retour
@@ -330,7 +330,7 @@
 
                         </button>
 
-                        <a href="{{ route('events.index') }}"
+                        <a href="{{ route('admin.events.index') }}"
                            class="btn btn-light w-100 mt-2">
                             Annuler
                         </a>
@@ -438,7 +438,7 @@ $(document).ready(function () {
                     confirmButtonText: 'Continuer'
                 }).then(function () {
 
-                    window.location.href = "{{ route('events.index') }}";
+                    window.location.href = "{{ route('admin.events.index') }}";
 
                 });
 

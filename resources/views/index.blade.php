@@ -27,6 +27,8 @@
             <a class="ed-text-link" href="{{ url('/causes') }}">Voir nos domaines d'intervention<span aria-hidden="true">↗</span></a>
           </article>
           <article>
+            <p>
+
             <p class="ed-eyebrow">Partenariat</p>
             <h2>Bâtir des actions durables et efficaces.</h2>
             <a class="ed-text-link" href="{{ url('/contact') }}">Devenir partenaire<span aria-hidden="true">↗</span></a>

@@ -82,13 +82,12 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/admin/donations-multiple', 'destroyMultiple')->name('donations.destroy.multiple');
     });
 
-    Route::delete('/events/destroy-multiple', [
-        EventController::class,
-        'destroyMultiple',
-    ])->name('events.destroyMultiple');
+    Route::delete('/events/destroy-multiple', [EventController::class, 'destroyMultiple'])
+    ->name('events.destroyMultiple');
 
-    Route::resource('events', EventController::class)
-        ->except(['show']);
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::resource('events', EventController::class)->except(['show']);
+});
 
 });
 

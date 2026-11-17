@@ -18,13 +18,13 @@
                             <a href="{{ route('dashboard.analytics') }}">Dashboard</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{ route('events.index') }}">Événements</a>
+                            <a href="{{ route('admin.events.index') }}">Événements</a>
                         </li>
                         <li class="breadcrumb-item active">Créer</li>
                     </ol>
                 </div>
 
-                <a href="{{ route('events.index') }}"
+                <a href="{{ route('admin.events.index') }}"
                    class="btn btn-light">
                     <i class="mdi mdi-arrow-left me-1"></i>
                     Retour
@@ -34,7 +34,7 @@
     </div>
 
     <form id="eventForm"
-          action="{{ route('events.store') }}"
+          action="{{ route('admin.events.store') }}"
           method="POST"
           enctype="multipart/form-data">
 

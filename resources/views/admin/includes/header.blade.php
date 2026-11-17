@@ -18,7 +18,7 @@
                     <i class="fe-maximize noti-icon"></i>
                 </a>
             </li>
-            <li class="dropdown notification-list topbar-dropdown">
+            {{-- <li class="dropdown notification-list topbar-dropdown">
                 <a class="nav-link dropdown-toggle waves-effect waves-light" data-bs-toggle="dropdown" href="#"
                     role="button" aria-haspopup="false" aria-expanded="false">
                     <i class="fe-bell noti-icon"></i>
@@ -112,13 +112,11 @@
                     </a>
 
                 </div>
-            </li>
+            </li> --}}
 
             <li class="dropdown notification-list topbar-dropdown">
                 <a class="nav-link dropdown-toggle nav-user me-0 waves-effect waves-light" data-bs-toggle="dropdown"
                     href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                    <img src="{{ asset('storage/users/' . auth()->user()->photo) }}" alt="user-image"
-                        class="rounded-circle">
                     <span class="pro-user-name ms-1">
                        {{ auth()->user()->name }} <i class="mdi mdi-chevron-down"></i>
                     </span>
@@ -130,16 +128,16 @@
                     </div>
 
                     <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                    {{-- <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="ri-account-circle-line"></i>
                         <span>My Account</span>
-                    </a>
+                    </a> --}}
 
-                    <!-- item-->
+                    {{-- <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
                         <i class="ri-settings-3-line"></i>
                         <span>Settings</span>
-                    </a>
+                    </a> --}}
 
                     <div class="dropdown-divider"></div>
 
@@ -203,7 +201,7 @@
                 <!-- End mobile menu toggle-->
             </li>
 
-            <li class="dropdown d-none d-xl-block">
+            {{-- <li class="dropdown d-none d-xl-block">
                 <a class="nav-link dropdown-toggle waves-effect waves-light" data-bs-toggle="dropdown" href="#"
                     role="button" aria-haspopup="false" aria-expanded="false">
                     Create New
@@ -235,7 +233,7 @@
                         <span>Settings</span>
                     </a>
                 </div>
-            </li>
+            </li> --}}
         </ul>
         <div class="clearfix"></div>
     </div>

@@ -4,7 +4,9 @@
 @section('title', 'Gestion des Contenus - ' . env('APP_NAME'))
 
 @section('content')
+@if(session('success'))
 
+@endif
     {{-- Titre de la page --}}
     <div class="row">
         <div class="col-12">
@@ -242,6 +244,8 @@
 
 <script>
     $(document).ready(function() {
+        // Message de succès après une opération
+
 
         // Configuration CSRF
         $.ajaxSetup({
