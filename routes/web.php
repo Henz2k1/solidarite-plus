@@ -13,3 +13,12 @@ Route::get('/about', function () {
 Route::get('/approach', function () {
     return view('approach');
 });
+
+Route::get('/events', function () {
+    return view('events');
+});
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
