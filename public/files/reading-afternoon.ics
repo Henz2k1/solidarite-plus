@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Colorlib//Welfare Example Events//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:reading-afternoon-welfare-2027@colorlib.com
+DTSTAMP:20261023T000000Z
+DTSTART:20270306T140000
+DTEND:20270306T160000
+SUMMARY:A shared reading afternoon
+LOCATION:Example Reading room
+DESCRIPTION:Illustrative event. Books\, conversation and a chance to learn 
+ about the reading-corner programme. Confirm local arrangements before atte
+ nding.
+END:VEVENT
+END:VCALENDAR

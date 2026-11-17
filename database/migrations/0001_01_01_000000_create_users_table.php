@@ -11,22 +11,32 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // 1. Table des utilisateurs configurée selon tes exigences précises
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->string('name', 50);
+            $table->string('email', 50)->unique();
+            $table->string('phone', 50)->nullable();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('photo', 50);
+            $table->enum('gender', ['m', 'f'])->default('m');
+            $table->enum('type', ['admin', 'editor','manager'])->default('manager');
+            $table->enum('accred', ['1', '2', '3'])->default('3');
+            $table->enum('status', ['on', 'off'])->default('off');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes(); 
         });
 
+        // 2. Table pour la récupération des mots de passe (Obligatoire dans Laravel 13)
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
 
+        // 3. Table pour la gestion des sessions (Obligatoire dans Laravel 13)
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->foreignId('user_id')->nullable()->index();
