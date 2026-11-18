@@ -22,7 +22,9 @@
         <section class="ed-section ed-about-detailed" id="about-us-section">
             <div class="container">
                 <header class="ed-heading">
-                    <p class="ed-eyebrow">Qui sommes-nous ?</p>
+                    <p class="ed-eyebrow">
+                        {{ \App\Models\Content::getValue('about.header.eyebrow') }}
+                      </p>
                     <h2>Solidarités Plus RDC (SOLIPLUS)</h2>
                 </header>
 
